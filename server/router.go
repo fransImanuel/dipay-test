@@ -1,32 +1,43 @@
 package server
 
 import (
-	"to-do/controllers"
-	"to-do/db"
+	"dipay-test/controllers"
+	"dipay-test/db"
 
 	"github.com/gin-gonic/gin"
 )
 
-func NewRouter(mysql *db.MysqlConn) *gin.Engine {
+func NewRouter(mongo *db.MongodbCon) *gin.Engine {
 	r := gin.Default()
 
 	r.Use(func(ctx *gin.Context) {
-		ctx.Set("db", mysql.GetDBInstance()) //set mysql db instance
+		ctx.Set("db", mongo) //set mongo db instance
 	})
 
-	//Activity
-	r.GET("/activity-groups", controllers.GetAllActivity)
-	r.GET("/activity-groups/:id", controllers.GetActivityByID)
-	r.POST("/activity-groups", controllers.PostActivity)
-	r.PATCH("/activity-groups/:id", controllers.UpdateActivityByID)
-	r.DELETE("/activity-groups/:id", controllers.DeleteActivityByID)
+	api := r.Group("/api")
+	{
+		//? No. 1 Fibonacci
+		api.POST("/fibonacci", controllers.Fibonacci)
+		//? No. 2 Combination
+		api.POST("/combination", controllers.Combination)
+		//? No. 3
+		{
+			//Company
+			api.POST("/companies", controllers.AddCompany)
+			api.GET("/companies", controllers.GetCompanies)
+			api.PUT("/companies/:id/set_active", controllers.SetToActive)
 
-	//Todo
-	r.GET("/todo-items", controllers.GetAllTodo)
-	r.GET("/todo-items/:id", controllers.GetTodoByID)
-	r.POST("/todo-items", controllers.PostTodo)
-	r.PATCH("/todo-items/:id", controllers.UpdateTodoByID)
-	r.DELETE("/todo-items/:id", controllers.DeleteTodoByID)
+			//employee
+			api.GET("/employees/:id", controllers.GetEmployee)
+			api.GET("/companies/:id/employees", controllers.GetEmployeeByCompanyId)
+			api.POST("/companies/:company_id/employees", controllers.AddEmployee)
+			api.DELETE("/employees/:id", controllers.DeleteEmployee)
+			api.PUT("/companies/:id/employees/:employee_id", controllers.UpdateEmployee)
+		}
+		//? No. 4 Call an API
+		api.GET("/countries", controllers.Countries)
+
+	}
 
 	return r
 

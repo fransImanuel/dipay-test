@@ -1,0 +1,217 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Dipay test",
+    "dateExported": "2023-05-07T07:00:24.171Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "17e2480e-af33-4af0-99e1-11d47fc14bdf",
+            "name": "Company",
+            "containerId": "",
+            "created": "2023-05-07T03:07:55.629Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "b947df2f-d663-491a-be89-b62b6142a8c2",
+            "name": "Employee",
+            "containerId": "",
+            "created": "2023-05-07T04:14:21.602Z",
+            "sortNum": 20000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "a03ff0bb-860c-4ed9-9922-08f38405002d",
+            "colId": "f6716eeb-9081-44f3-9512-ac48bd400dcf",
+            "containerId": "",
+            "name": "fibonaci",
+            "url": "http://localhost:8080/api/fibonacci",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-05-06T23:40:50.093Z",
+            "modified": "2023-05-06T23:53:21.331Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n        \"n\": 50\r\n    }",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "9a8cdadd-a0d0-4119-9910-0a1505f2bd90",
+            "colId": "f6716eeb-9081-44f3-9512-ac48bd400dcf",
+            "containerId": "",
+            "name": "combination",
+            "url": "http://localhost:8080/api/combination",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-05-07T00:02:42.813Z",
+            "modified": "2023-05-07T00:07:51.592Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n    \"n\": 4,\r\n    \"r\": 2\r\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "66a87e1d-10f1-4f3b-98dd-89417f1160b8",
+            "colId": "f6716eeb-9081-44f3-9512-ac48bd400dcf",
+            "containerId": "",
+            "name": "api negara",
+            "url": "https://gist.githubusercontent.com/herysepty/ba286b815417363bfbcc472a5197edd0/raw/aed8ce8f5154208f9fe7f7b04195e05de5f81fda/coutries.json",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-05-07T00:18:49.991Z",
+            "modified": "2023-05-07T00:19:30.021Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "be57c312-37fa-4503-8e2b-0127cf7c9075",
+            "colId": "f6716eeb-9081-44f3-9512-ac48bd400dcf",
+            "containerId": "",
+            "name": "get country",
+            "url": "http://localhost:8080/api/countries",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-05-07T00:32:56.154Z",
+            "modified": "2023-05-07T00:33:24.365Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "3c032cdb-0759-40b7-8aed-6254bd23c74c",
+            "colId": "f6716eeb-9081-44f3-9512-ac48bd400dcf",
+            "containerId": "17e2480e-af33-4af0-99e1-11d47fc14bdf",
+            "name": "Add Company",
+            "url": "http://localhost:8080/api/companies",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2023-05-07T03:08:02.288Z",
+            "modified": "2023-05-07T03:13:55.320Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n    \"company_name\": \"eee2\",\r\n    \"telephone_number\": \"085815469401\",\r\n    \"address\": \"jln. raya kutabumi blok b 1231\"\r\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "4fd29337-515b-4151-ad6b-5d28a93b23de",
+            "colId": "f6716eeb-9081-44f3-9512-ac48bd400dcf",
+            "containerId": "17e2480e-af33-4af0-99e1-11d47fc14bdf",
+            "name": "Get Company List",
+            "url": "http://localhost:8080/api/companies",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-05-07T03:21:44.795Z",
+            "modified": "2023-05-07T03:22:00.811Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "cffc58ed-8638-42d6-9505-4266a2a3b21b",
+            "colId": "f6716eeb-9081-44f3-9512-ac48bd400dcf",
+            "containerId": "17e2480e-af33-4af0-99e1-11d47fc14bdf",
+            "name": "Update Is_Active to true",
+            "url": "http://localhost:8080/api/companies/645716b0b7c63c70bcba3b52/set_active",
+            "method": "PUT",
+            "sortNum": 70000,
+            "created": "2023-05-07T03:43:23.543Z",
+            "modified": "2023-05-07T03:44:42.883Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "c6c110a5-bb0a-4f1f-b876-36683bf6e8b2",
+            "colId": "f6716eeb-9081-44f3-9512-ac48bd400dcf",
+            "containerId": "b947df2f-d663-491a-be89-b62b6142a8c2",
+            "name": "Add Employee",
+            "url": "http://localhost:8080/api/companies/645716b0b7c63c70bcba3b52/employees",
+            "method": "POST",
+            "sortNum": 80000,
+            "created": "2023-05-07T04:14:28.596Z",
+            "modified": "2023-05-07T05:51:32.598Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"name\": \"eaq\",\n    \"email\": \"fra2n2s@gmail.com\",\n    \"phone_number\": \"08\",\n    \"jobtitle\": \"staff\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "a73ab0bf-4d75-4352-92d8-8eac9748e420",
+            "colId": "f6716eeb-9081-44f3-9512-ac48bd400dcf",
+            "containerId": "b947df2f-d663-491a-be89-b62b6142a8c2",
+            "name": "Get Employee by id",
+            "url": "http://localhost:8080/api/employees/123",
+            "method": "GET",
+            "sortNum": 100000,
+            "created": "2023-05-07T04:51:27.716Z",
+            "modified": "2023-05-07T04:52:15.225Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "8692fef0-5e17-4c36-b6bb-cd6f39b39d6c",
+            "colId": "f6716eeb-9081-44f3-9512-ac48bd400dcf",
+            "containerId": "b947df2f-d663-491a-be89-b62b6142a8c2",
+            "name": "Delete Employee",
+            "url": "http://localhost:8080/api/employees/64572bf521e8579680d212b5",
+            "method": "DELETE",
+            "sortNum": 110000,
+            "created": "2023-05-07T04:58:11.169Z",
+            "modified": "2023-05-07T04:58:45.183Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "f14a69c0-24ee-46d1-b072-14f9532588a5",
+            "colId": "f6716eeb-9081-44f3-9512-ac48bd400dcf",
+            "containerId": "b947df2f-d663-491a-be89-b62b6142a8c2",
+            "name": "Update Employee ",
+            "url": "http://localhost:8080/api/companies/645716b0b7c63c70bcba3b52/employees/6457273f92547488080f6c7e",
+            "method": "PUT",
+            "sortNum": 120000,
+            "created": "2023-05-07T05:42:30.870Z",
+            "modified": "2023-05-07T05:46:12.772Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"name\": \"imanuel\",\n    \"email\": \"22@gmail.com\",\n    \"phone_number\": \"08\",\n    \"jobtitle\": \"staff\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "4ebef106-997d-42fa-9176-ebbb06933e4f",
+            "colId": "f6716eeb-9081-44f3-9512-ac48bd400dcf",
+            "containerId": "b947df2f-d663-491a-be89-b62b6142a8c2",
+            "name": "Get Employee By Company Id",
+            "url": "http://localhost:8080/api/companies/645716b0b7c63c70bcba3b52/employees",
+            "method": "GET",
+            "sortNum": 130000,
+            "created": "2023-05-07T06:43:06.134Z",
+            "modified": "2023-05-07T06:45:36.318Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

@@ -1,10 +1,10 @@
 package server
 
 import (
-	"to-do/db"
+	"dipay-test/db"
 )
 
-func Init(mysql *db.MysqlConn) {
-	r := NewRouter(mysql)
-	r.Run(":3030")
+func Init(mongo *db.MongodbCon) {
+	r := NewRouter(mongo)
+	r.Run(":8080")
 }

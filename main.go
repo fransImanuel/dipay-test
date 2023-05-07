@@ -1,14 +1,14 @@
 package main
 
 import (
-	"to-do/config"
-	"to-do/db"
-	"to-do/server"
+	"dipay-test/config"
+	"dipay-test/db"
+	"dipay-test/server"
 )
 
 func main() {
 	config.InitEnv()
-	mysql := db.NewMysql(config.GetMysqlEnv())
-	mysql.InitDB()
-	server.Init(mysql)
+	mongo := db.NewMongodb(config.GetMongoEnv())
+	mongo.InitDB()
+	server.Init(mongo)
 }
