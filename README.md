@@ -14,7 +14,7 @@ Dipay Test
 If you want to run the program locally, you need to specify MongoDB URI 
 ```bash
   docker build --tag=dipay-test:1.0 .
-  docker run --name dipay-test -e MONGO_URI=172.18.0.1 -p 8080:8080 dipay-test:1.0
+  docker run --name dipay-test -e MONGO_URI="mongodb://localhost:27017/" -p 8080:8080 dipay-test:1.0
 ```
 
 or if you want to run without docker you need to download this repo to your local and do: 
