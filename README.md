@@ -24,6 +24,15 @@ or if you want to run without docker you need to download this repo to your loca
   go run .\main.go -MONGO_URI="mongodb://localhost:27017/"
 ```
 
+or if you want to run only using docker, just go straight: 
+
+```bash
+  docker pull fransimanuel99/dipay-test
+  docker run --name dipay-test -e MONGO_URI="mongodb://localhost:27017/" -p 8080:8080 fransimanuel99/dipay-test
+```
+
+Make sure you have mongodb URI included when running the program or docker image 
+
 and dont forget to use exported thunder client api to do the test ( link above )
 
 ## Appendix
