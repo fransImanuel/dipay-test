@@ -31,9 +31,11 @@ or if you want to run only using docker, just go straight:
   docker run --name dipay-test -e MONGO_URI="mongodb://localhost:27017/" -p 8080:8080 fransimanuel99/dipay-test
 ```
 
-Make sure you have mongodb URI included when running the program or docker image 
+Make sure you have mongodb URI included when running the program or docker image.
 
-and dont forget to use exported thunder client api to do the test ( link above )
+and dont forget to use exported thunder client api to do the test ( link above ).
+
+You can visit my dockerhub repository here https://hub.docker.com/r/fransimanuel99/dipay-test
 
 ## Appendix
 
